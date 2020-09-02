@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400&display=swap');
+
+$comforta : 'Comfortaa', cursive;
+$green       : #1ABC9C;
+$light-green : #A1CB00;
+$gray        : #333333;
+
+
+p{
+    font-family : $comforta;
+    color       : $light-green;
+}
