@@ -1,7 +1,9 @@
-import { BrowserModule    }  from  '@angular/platform-browser';
-import { NgModule         }  from  '@angular/core';
-import { HttpClientModule }  from  '@angular/common/http';
-import { NgxSpinnerModule }  from  'ngx-spinner';
+import { BrowserModule      }  from  '@angular/platform-browser';
+import { NgModule           }  from  '@angular/core';
+import { HttpClientModule   }  from  '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+
+
 
 
 
@@ -20,18 +22,21 @@ import { HomeComponent           }  from  './home/home.component';
     VideoThumbnailComponent,
     SearchBarComponent,
     VideoStreamingComponent,
-    HomeComponent
+    HomeComponent,
+  
+  
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    NgxSpinnerModule
+    FormsModule
 
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
 
 

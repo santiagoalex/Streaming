@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output,EventEmitter } from '@angular/core';
+import { ServiceService } from '../service/service.service';
 
 @Component({
   selector: 'app-search-bar',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchBarComponent implements OnInit {
 
-  constructor() { }
+  @Output() topic: EventEmitter <string> = new EventEmitter();
+  search: string;
+
+  constructor( private youTubeService : ServiceService) { }
 
   ngOnInit() {
+    console.log("entro al init de  la busqueda")
+
   }
 
+  
+  getSearch(){
+    this.topic.emit(this.search)
+    console.log("entro a la busqueda DE " + this.search)
+  }
 }

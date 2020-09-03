@@ -8,16 +8,16 @@ import { Observable }  from 'rxjs';
 })
 export class ServiceService {
 
-  apiKey     : string  = 'AIzaSyBxoDLhRE9vGn7A_ubIh9YsN7HEn-tL9aQ'
+  apiKey     : string  = 'AIzaSyBq06xqM8E2HXTeK-bWNVmsV43Gu3LdwS8'
   url        : string  = 'https://www.googleapis.com/youtube/v3/search?key='
-  maxResults : number  =  6
-  topic      : string  = 'dog'
+  maxResults : number  =  1
+  
 
   constructor( private http : HttpClient ) { }
 
-  getVideosForChanel(maxResults): Observable<Object> {
+  getVideosByTopic(topic): Observable<Object> {
 
-    let query = this.url + this.apiKey  + '&order=date&q='+this.topic+'&part=snippet&type=video,id&maxResults=' + maxResults;
+    let query = this.url + this.apiKey  + '&order=date&q='+topic+'&part=snippet&type=video,id&maxResults=' + this.maxResults;
     console.log("oh Dios que funcione ");
     let response : any;
     return this.http.get( query )
@@ -26,7 +26,7 @@ export class ServiceService {
         console.log(res);
         response = res;
         return response;
-        console.log(res);
+      
 
       }))
   }
