@@ -1,0 +1,29 @@
+@import "./src/styles.scss";
+
+
+.p {
+    font-size: 2rem;
+    color: white;
+}
+.bg{
+background-color: $gray;
+
+}
+
+.navbar{
+border-radius: 0.3em;
+}
+
+.button{
+    font-family : $comforta;
+    border-color: $green;
+    color:white ;
+    border: 1px solid white;
+}
+
+button:hover{
+    background-color: $light-green ;
+    border-color:$light-green
+    
+}
+

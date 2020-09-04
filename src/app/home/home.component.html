@@ -1,23 +1,30 @@
-
-<p > HOME  
-    Almost before we knew it, we had left the ground.</p>
-
-    <app-video-streaming></app-video-streaming>
-<!-- <app-video-thumbnail></app-video-thumbnail> -->
-
-<app-search-bar (topic)="getVideo($event)"></app-search-bar> 
-
-<div *ngFor="let video of videos" class="col-xl-3 col-md-6 mb-4">
-    <div class="card border-0 shadow vh-50">
-        <a href="https://www.youtube.com/watch?v={{video.id.videoId}}" target="_blank">
-            <img [src]="video.snippet.thumbnails.medium.url" class="card-img-top" alt="..."></a>
-        <div class="card-body text-center">
-            <h5 class="card-title mb-0">
-                <a href="https://www.youtube.com/watch?v={{video.id.videoId}}">{{video.snippet.title}}
-                </a></h5>
-            <div class="card-text text-black-50">{{video.snippet.description.slice(0, 100)}}</div>
-            <p class="card-text">{{video.snippet.description}}</p>
+<div class="container">
+    <app-search-bar (topic)="getVideo($event)"></app-search-bar>
+    <div class="container ">
+        <div class="row row-content overflow-auto">
+            <div *ngFor="let video of videos" class="col-6 col-md-2 mb-4">
+                <div class="card border-0 shadow vh-50">
+                    <a><img [src]="video.snippet.thumbnails.medium.url" class="card-img-top" alt="..."></a>
+                    <div class="card-body text-center">
+                        <h5 class="card-title mb-0">
+                            <a  [routerLink]="['/video',video.id.videoId]">{{video.snippet.title.slice(0, 15)}}</a>
+                        </h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row row-content ">
+        <div class="col-12 ">
+            <router-outlet></router-outlet>
         </div>
     </div>
 </div>
+
+
+ 
+
+
+
+
 

@@ -1,1 +1,12 @@
-<p>video-thumbnail works!</p>
+<div *ngFor="let video of videoDescription">
+    <div *ngIf="video.id.videoId == videoIdentification">
+        <div class="card border-0 shadow vh-50">
+            <div class="card-body text-center">
+                <h5 class="card-title mb-0">
+                    <a>{{video.snippet.title}}</a>
+                </h5>
+                <p class="card-text">{{video.snippet.description}}</p>
+            </div>
+        </div>
+    </div>
+</div>

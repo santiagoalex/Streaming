@@ -1,0 +1,15 @@
+@import "./src/styles.scss";
+
+.video-style{
+    width: 100%;
+    height: 100%;
+    border-radius: 0.5rem;
+    padding-right: 15px;
+}
+
+.row{
+    margin:0px auto;
+    padding: 15px 0px 15px 0px;
+    border-bottom: 1px ridge;
+    min-height: 400px;
+}

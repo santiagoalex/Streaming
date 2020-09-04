@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400&display=swap');
+@import "~bootstrap/dist/css/bootstrap.min.css";
+//@import "~font-awesome/css/font-awesome.min.css";
 
 $comforta : 'Comfortaa', cursive;
 $green       : #1ABC9C;
@@ -8,5 +10,14 @@ $gray        : #333333;
 
 p{
     font-family : $comforta;
-    color       : $light-green;
+    color       : $gray;
+}
+
+a{
+    font-family : $comforta;
+    color       : $light-green; 
+}
+
+container{
+    overflow: hidden;
 }

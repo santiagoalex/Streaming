@@ -1,10 +1,10 @@
-import { Component, OnInit, Output,EventEmitter } from '@angular/core';
-import { ServiceService } from '../service/service.service';
+import { Component, OnInit, Output,EventEmitter  }  from  '@angular/core';
+import { ServiceService                          }  from  '../service/service.service';
 
 @Component({
-  selector: 'app-search-bar',
-  templateUrl: './search-bar.component.html',
-  styleUrls: ['./search-bar.component.scss']
+  selector    :  'app-search-bar',
+  templateUrl :  './search-bar.component.html',
+  styleUrls   :  ['./search-bar.component.scss']
 })
 export class SearchBarComponent implements OnInit {
 
@@ -13,14 +13,10 @@ export class SearchBarComponent implements OnInit {
 
   constructor( private youTubeService : ServiceService) { }
 
-  ngOnInit() {
-    console.log("entro al init de  la busqueda")
+  ngOnInit() {}
 
-  }
 
-  
   getSearch(){
     this.topic.emit(this.search)
-    console.log("entro a la busqueda DE " + this.search)
   }
 }

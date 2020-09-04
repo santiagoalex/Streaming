@@ -1,5 +1,9 @@
-<p>video-streaming works!</p>
-<p>
-    <iframe  [src]="getVideoIframe()" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" ></iframe>
-    </p>
-    <!-- <youtube-player videoId="PRQCAL_RMVo"></youtube-player> -->
+<div class="container">
+    <div class="row">
+        <div class=" col-12 col-md-6">
+            <iframe class="video-style" [src]="getVideoIframe()" frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>
+        </div>
+        <app-video-thumbnail class="col-12 col-md-6 " [videoIdentification]="videoId"></app-video-thumbnail>
+    </div>
+</div>
