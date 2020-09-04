@@ -4,8 +4,9 @@ import { VideoStreamingComponent  }  from  './video-streaming/video-streaming.co
 
 
 const routes: Routes = [ 
-  { path : 'video/:id'  , component : VideoStreamingComponent },
   { path : ''           , component : VideoStreamingComponent },
+  { path : 'video/:id'  , component : VideoStreamingComponent },
+
 
 ];
 
