@@ -30,7 +30,7 @@ export class ServiceService {
   }
 
   getVideoById(id): Observable<Object> {
-    let query = this.url + this.apiKey  + '&order=date&q='+(this.topic ? this.topic:'dogs')+'&part=snippet&type=video&id='+id+'&maxResults='+ this.maxResults ;
+    let query = this.url + this.apiKey  + '&order=date&q='+(this.topic ? this.topic:'dogs')+'&part=snippet&type=video&id='+(id ? id:'FIRT7lf8byw')+'&maxResults='+ this.maxResults ;
     let response : any;
     return this.http.get( query )
       .pipe(

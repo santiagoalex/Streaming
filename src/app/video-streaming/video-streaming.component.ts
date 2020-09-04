@@ -22,6 +22,7 @@ export class VideoStreamingComponent implements OnInit {
   constructor( private _sanitizer : DomSanitizer, private rutaActiva: ActivatedRoute, private youTubeService : ServiceService ) { }
  
   ngOnInit() {
+      
       this.videoId = this.rutaActiva.snapshot.params.id;
       this.rutaActiva.params.subscribe(
       (params : Params) =>{
@@ -32,7 +33,7 @@ export class VideoStreamingComponent implements OnInit {
   }
   
   getVideoIframe(url) {
-    return this._sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/'+ (this.videoId ? this.videoId:"dogs"));   
+    return this._sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/'+ (this.videoId ? this.videoId:'FIRT7lf8byw'));   
 }
 
 
