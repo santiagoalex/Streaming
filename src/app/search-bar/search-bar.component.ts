@@ -13,7 +13,9 @@ export class SearchBarComponent implements OnInit {
 
   constructor( private youTubeService : ServiceService) { }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.search = 'dogs'
+  }
 
 
   getSearch(){
